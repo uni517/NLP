@@ -1,0 +1,39 @@
+{
+    "zero_allow_untested_optimizer": true,
+    "optimizer": {
+        "type": "OneBitAdam",
+        "params": {
+            "lr": 3e-5,
+            "betas": [0.998, 0.999],
+            "eps": 1e-5,
+            "weight_decay": 1e-9,
+            "cuda_aware": true
+        }
+    },
+    "scheduler": {
+        "type": "WarmupLR",
+        "params": {
+            "last_batch_iteration": -1,
+            "warmup_min_lr": 0,
+            "warmup_max_lr": 3e-5,
+            "warmup_num_steps": 100
+        }
+    },
+    "zero_optimization": {
+        "stage": 3,
+        "cpu_offload": true,
+        "cpu_offload_params": true,
+        "contiguous_gradients": true, 
+        "overlap_comm": true,
+        "allgather_bucket_size": 1e8,
+        "reduce_bucket_size": 1e8 
+    },
+    "fp16": {
+        "enabled": true,
+        "loss_scale": 0,
+        "initial_scale_power": 32,
+        "loss_scale_window": 1000,
+        "hysteresis": 2,
+        "min_loss_scale": 1
+    }
+}
