@@ -1,0 +1,109 @@
+<!doctype html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'><link rel="stylesheet">
+<html>
+<head>
+  {% load static %}
+<link href="{% static "css/style.css" %}" rel="stylesheet" type = "text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</script>
+<script>
+	$(document).ready(function(){
+		$('.msg_send_btn').click(function(event){
+			$('.msg_send_btn i').toggleClass('fa-microphone-alt-slash').toggleClass('fa-microphone-alt')});
+	});
+</script>
+
+</head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+
+<body>
+	<div class="container">
+<div class="messaging">
+      <div class="inbox_msg">
+        <div class="mesgs">
+			<div class="user_info">
+				<span class="left">MOMO</span>
+				<span id="action_menu_btn">更換角色 <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><i class="fas fa-sync-alt" type="text" style="color: aliceblue;"></i></a></span>
+					<div id="light" class="white_content">
+						<div id="slider">
+							<a href="#" class="control_next"><i class="fas fa-angle-right"></i></a>
+							<a href="#" class="control_prev"><i class="fas fa-angle-left"></i></a>
+							<ul>
+								<li><img src="{% static 'img/persona/persona1.jpg' %}"></li>
+								<li><img src="{% static 'img/persona/persona2.jpg' %}"></li>
+								<li><img src="{% static 'img/persona/persona3.jpg' %}"></li>
+								<li><img src="{% static 'img/persona/persona4.jpg' %}"></li>
+								<li><img src="{% static 'img/persona/persona5.jpg' %}"></li>
+							</ul>  
+						</div>
+						<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{% static "js/script.js" %}"></script>
+						<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><i class="fas fa-times-circle" type="text" style="font-size:30px;position: absolute;top: 0px;right: 30px;"></i>
+						</a>
+					</div> 
+        			<div id="fade" class="black_overlay"></div>
+			</div>
+			
+			<div class="msg_history">
+				<div class="incoming_msg">
+					<div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+					<div class="received_msg">
+					<div class="received_withd_msg">
+                  <p>Test which is a new approach to have all
+                    solutions</p>
+                  <span class="time_date"> 11:01 AM</span></div>
+             </div>
+            </div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p>Test which is a new approach to have all
+                  solutions</p>
+                <span class="time_date"> 11:01 AM</span> </div>
+            </div>
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Test, which is a new approach to have</p>
+                  <span class="time_date"> 11:01 AM</span></div>
+              </div>
+            </div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p>Apollo University, Delhi, India Test</p>
+                <span class="time_date"> 11:01 AM</span> </div>
+            </div>
+            <div class="incoming_msg">
+              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>We work directly with our designers and suppliers,
+                    and sell direct to you, which means quality, exclusive
+                    products, at a price anyone can afford.</p>
+                  <span class="time_date"> 11:01 AM</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="type_msg">
+			  <button class="msg_send_btn" style="outline:none;" type="button"><i class="fas fa-microphone-alt-slash" ></i></button>
+			  <div class="input_msg_write">
+              	<input type="text" class="write_msg" placeholder="Type a message">
+              	<button class="msg_send_btns" style="outline:none;" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+              </div>
+				<div class="abgne-menu-20140101-1">
+	    			<input type="radio" id="male" name="sex">
+	    				<label for="male">英文</label>
+ 
+	    			<input type="radio" id="female" name="sex">
+	    				<label for="female">中文</label>
+			  </div>
+          </div>
+        </div>
+      </div>
+      
+    </div></div>
+</body>
+</html>
